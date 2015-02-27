@@ -1,22 +1,14 @@
-import {HttpClient} from 'aurelia-http-client';
+import Api from './api';
+import UserModel from './user-model';
 
-export default class UsersService {
-  static inject() { return [HttpClient]; }
-
-  constructor(http){
-    this.http = http;
-  }
-
+export default class UsersService extends Api {
   getAll() {
     return new Promise((resolve, reject) => {
-      this.http.get('/mocks/users.json')
+      this.request('get', '/mocks/users.json')
         .then(data => {
-          try {
-            data = JSON.parse(data.response);
-            resolve(data);
-          } catch (err) {
-            reject(err);
-          }
+          var users = [];
+          data.forEach (data => users.push(new UserModel(data)));
+          resolve(users);
         })
         .catch(err => reject(err));
     });

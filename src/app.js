@@ -1,5 +1,4 @@
 import {Router} from 'aurelia-router';
-import UsersService from './api/users-service';
 
 export class App {
   static inject() { return [Router]; }
