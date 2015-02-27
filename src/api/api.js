@@ -11,11 +11,10 @@ export default class Api {
     return new Promise((resolve, reject) => {
       this.http[method](path, params)
         .then(data => {
-          try {
-            data = JSON.parse(data.response);
-            resolve(data);
-          } catch (err) {
-            reject(err);
+          if ((''+data.statusCode)[0] === '2') {
+            resolve(data.content);
+          } else {
+            reject(data.statusText || data.statusCode);
           }
         })
         .catch(err => reject(err));
