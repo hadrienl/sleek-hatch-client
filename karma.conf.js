@@ -15,16 +15,19 @@ module.exports = function(config) {
     jspm: {
       // Edit this to your needs
       loadFiles: [
-        'jspm_packages/github/petkaantonov/bluebird@2.9.12/js/browser/bluebird.min.js',
-        'src/**/*.js',
         'test/mocks/**/*.js',
         'test/unit/**/*.js'
-      ]
+      ],
+      serveFiles: [
+        'src/**/*.js',
+      ],
+      useBundles: true
     },
 
 
     // list of files / patterns to load in the browser
-    files: [],
+    //files: ['jspm_packages/github/petkaantonov/bluebird@2.9.12/js/browser/bluebird.js'],
+    files: ['tests/mocks/bluebird.js'],
 
 
     // list of files to exclude
