@@ -1,0 +1,23 @@
+<template>
+  <table>
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Subdomain</th>
+      <th>CreatedAt</th>
+      <th>UsersCount</th>
+      <th>ChannelsCount</th>
+    </thead>
+    <tbody>
+      <tr
+        repeat.for="account of accounts">
+        <td>${account.id}</td>
+        <td>${account.name}</td>
+        <td>${account.subdomain}</td>
+        <td>${account.createdAt}</td>
+        <td>${account.usersCount}</td>
+        <td>${account.channelsCount}</td>
+      </tr>
+    </tbody>
+  </table>
+</template>

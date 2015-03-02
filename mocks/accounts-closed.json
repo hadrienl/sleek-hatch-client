@@ -1,0 +1,29 @@
+{
+    "pagination": [
+        {
+            "page": "1",
+            "current": true
+        }
+    ],
+    "accounts": [
+        {
+            "id": 102,
+            "name": "App",
+            "subdomain": "app",
+            "created_at": "2015-01-23T16:20:23.531Z",
+            "users_count": 1,
+            "channels_count": 0,
+            "lifetime_messages": 0,
+            "thirty_days_messages": 0,
+            "seven_days_messages": 0,
+            "average_messages_per_month": 0,
+            "inbox_count": 0,
+            "live": false,
+            "task_categories_count": 0,
+            "task_categories": [],
+            "rules_count": 0,
+            "rules": [],
+            "thirty_days_estimate": 0
+        }
+    ]
+}

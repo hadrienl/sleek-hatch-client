@@ -1,3 +1,13 @@
 <template>
-  <h2>Channels list</h2>
+  <h2>Accounts list — ${router.currentInstruction.config.data.type}</h2>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav">
+      <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+        <a href.bind="row.href">${row.title}</a>
+      </li>
+    </ul>
+  </nav>
+
+  <router-view></router-view>
 </template>

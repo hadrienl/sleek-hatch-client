@@ -1,0 +1,314 @@
+{
+    "pagination": [
+        {
+            "page": "1",
+            "current": true
+        }
+    ],
+    "accounts": [
+        {
+            "id": 133,
+            "name": "8th Light",
+            "subdomain": "8thlight",
+            "created_at": "2015-02-24T09:30:54.395Z",
+            "users_count": 2,
+            "channels_count": 1,
+            "lifetime_messages": 7,
+            "thirty_days_messages": 6,
+            "seven_days_messages": 4,
+            "average_messages_per_month": 7,
+            "inbox_count": 4,
+            "live": false,
+            "task_categories_count": 5,
+            "task_categories": [
+                {
+                    "id": 602,
+                    "account_id": 133,
+                    "icon": "task",
+                    "name": "Urgent",
+                    "color": "#9ACD00",
+                    "created_at": "2015-02-24T09:40:58.748Z",
+                    "updated_at": "2015-02-24T09:40:58.748Z",
+                    "enabled": true
+                },
+                {
+                    "id": 601,
+                    "account_id": 133,
+                    "icon": "task",
+                    "name": "Spam",
+                    "color": "#C40640",
+                    "created_at": "2015-02-24T09:40:58.683Z",
+                    "updated_at": "2015-02-24T09:40:58.683Z",
+                    "enabled": true
+                },
+                {
+                    "id": 600,
+                    "account_id": 133,
+                    "icon": "task",
+                    "name": "Question",
+                    "color": "#FFD000",
+                    "created_at": "2015-02-24T09:40:58.632Z",
+                    "updated_at": "2015-02-24T09:40:58.632Z",
+                    "enabled": true
+                },
+                {
+                    "id": 599,
+                    "account_id": 133,
+                    "icon": "task",
+                    "name": "Plainte",
+                    "color": "#60B71A",
+                    "created_at": "2015-02-24T09:40:58.571Z",
+                    "updated_at": "2015-02-24T09:40:58.571Z",
+                    "enabled": true
+                },
+                {
+                    "id": 598,
+                    "account_id": 133,
+                    "icon": "task",
+                    "name": "Retours clients",
+                    "color": "#EF313D",
+                    "created_at": "2015-02-24T09:40:58.513Z",
+                    "updated_at": "2015-02-24T09:40:58.513Z",
+                    "enabled": true
+                }
+            ],
+            "rules_count": 0,
+            "rules": [],
+            "thirty_days_estimate": 17,
+            "trial_end_date": "2015-03-18T00:00:00.000Z"
+        },
+        {
+            "id": 136,
+            "name": "category",
+            "subdomain": "category",
+            "created_at": "2015-02-25T21:11:18.256Z",
+            "users_count": 2,
+            "channels_count": 1,
+            "lifetime_messages": 1,
+            "thirty_days_messages": 0,
+            "seven_days_messages": 0,
+            "average_messages_per_month": 1,
+            "inbox_count": 1,
+            "live": false,
+            "task_categories_count": 4,
+            "task_categories": [
+                {
+                    "id": 614,
+                    "account_id": 136,
+                    "icon": "task",
+                    "name": "new one",
+                    "color": "#EF313D",
+                    "created_at": "2015-02-25T21:11:55.714Z",
+                    "updated_at": "2015-02-25T21:11:55.714Z",
+                    "enabled": true
+                },
+                {
+                    "id": 613,
+                    "account_id": 136,
+                    "icon": "task",
+                    "name": "High priority",
+                    "color": "#9ACD00",
+                    "created_at": "2015-02-25T21:11:43.756Z",
+                    "updated_at": "2015-02-25T21:11:43.756Z",
+                    "enabled": true
+                },
+                {
+                    "id": 611,
+                    "account_id": 136,
+                    "icon": "task",
+                    "name": "Question",
+                    "color": "#FFD000",
+                    "created_at": "2015-02-25T21:11:43.649Z",
+                    "updated_at": "2015-02-25T21:11:43.649Z",
+                    "enabled": true
+                },
+                {
+                    "id": 609,
+                    "account_id": 136,
+                    "icon": "task",
+                    "name": "Feedback",
+                    "color": "#EF313D",
+                    "created_at": "2015-02-25T21:11:43.288Z",
+                    "updated_at": "2015-02-25T21:11:43.288Z",
+                    "enabled": true
+                }
+            ],
+            "rules_count": 0,
+            "rules": [],
+            "thirty_days_estimate": 0,
+            "trial_end_date": "2015-03-11T21:11:17.989Z"
+        },
+        {
+            "id": 138,
+            "name": "rio",
+            "subdomain": "rio",
+            "created_at": "2015-02-26T13:21:42.214Z",
+            "users_count": 2,
+            "channels_count": 0,
+            "lifetime_messages": 0,
+            "thirty_days_messages": 0,
+            "seven_days_messages": 0,
+            "average_messages_per_month": 0,
+            "inbox_count": 0,
+            "live": false,
+            "task_categories_count": 0,
+            "task_categories": [],
+            "rules_count": 0,
+            "rules": [],
+            "thirty_days_estimate": 0,
+            "trial_end_date": "2015-03-12T13:21:41.922Z"
+        },
+        {
+            "id": 135,
+            "name": "test",
+            "subdomain": "test",
+            "created_at": "2015-02-25T18:30:04.628Z",
+            "users_count": 2,
+            "channels_count": 0,
+            "lifetime_messages": 0,
+            "thirty_days_messages": 0,
+            "seven_days_messages": 0,
+            "average_messages_per_month": 0,
+            "inbox_count": 0,
+            "live": false,
+            "task_categories_count": 0,
+            "task_categories": [],
+            "rules_count": 0,
+            "rules": [],
+            "thirty_days_estimate": 0,
+            "trial_end_date": "2015-03-11T18:30:04.066Z"
+        },
+        {
+            "id": 134,
+            "name": "test1",
+            "subdomain": "test1",
+            "created_at": "2015-02-24T13:01:21.298Z",
+            "users_count": 2,
+            "channels_count": 1,
+            "lifetime_messages": 1,
+            "thirty_days_messages": 0,
+            "seven_days_messages": 0,
+            "average_messages_per_month": 1,
+            "inbox_count": 0,
+            "live": false,
+            "task_categories_count": 4,
+            "task_categories": [
+                {
+                    "id": 608,
+                    "account_id": 134,
+                    "icon": "task",
+                    "name": "Pancho",
+                    "color": "#00CDF0",
+                    "created_at": "2015-02-24T13:16:53.421Z",
+                    "updated_at": "2015-02-24T13:16:53.421Z",
+                    "enabled": true
+                },
+                {
+                    "id": 607,
+                    "account_id": 134,
+                    "icon": "task",
+                    "name": "High priority",
+                    "color": "#9ACD00",
+                    "created_at": "2015-02-24T13:16:39.133Z",
+                    "updated_at": "2015-02-24T13:16:39.133Z",
+                    "enabled": true
+                },
+                {
+                    "id": 606,
+                    "account_id": 134,
+                    "icon": "task",
+                    "name": "Spam",
+                    "color": "#C40640",
+                    "created_at": "2015-02-24T13:16:39.092Z",
+                    "updated_at": "2015-02-24T13:16:39.092Z",
+                    "enabled": true
+                },
+                {
+                    "id": 605,
+                    "account_id": 134,
+                    "icon": "task",
+                    "name": "Question",
+                    "color": "#FFD000",
+                    "created_at": "2015-02-24T13:16:39.050Z",
+                    "updated_at": "2015-02-24T13:16:39.050Z",
+                    "enabled": true
+                }
+            ],
+            "rules_count": 0,
+            "rules": [],
+            "thirty_days_estimate": 0,
+            "trial_end_date": "2015-03-10T13:01:20.844Z"
+        },
+        {
+            "id": 132,
+            "name": "Thoughtworks",
+            "subdomain": "thoughtworks",
+            "created_at": "2015-02-19T15:19:59.506Z",
+            "users_count": 2,
+            "channels_count": 2,
+            "lifetime_messages": 1,
+            "thirty_days_messages": 0,
+            "seven_days_messages": 0,
+            "average_messages_per_month": 1,
+            "inbox_count": 0,
+            "live": false,
+            "task_categories_count": 5,
+            "task_categories": [
+                {
+                    "id": 597,
+                    "account_id": 132,
+                    "icon": "task",
+                    "name": "Urgent",
+                    "color": "#9ACD00",
+                    "created_at": "2015-02-19T15:21:31.480Z",
+                    "updated_at": "2015-02-19T15:21:31.480Z",
+                    "enabled": true
+                },
+                {
+                    "id": 596,
+                    "account_id": 132,
+                    "icon": "task",
+                    "name": "Spam",
+                    "color": "#C40640",
+                    "created_at": "2015-02-19T15:21:31.437Z",
+                    "updated_at": "2015-02-19T15:21:31.437Z",
+                    "enabled": true
+                },
+                {
+                    "id": 595,
+                    "account_id": 132,
+                    "icon": "task",
+                    "name": "Question",
+                    "color": "#FFD000",
+                    "created_at": "2015-02-19T15:21:31.396Z",
+                    "updated_at": "2015-02-19T15:21:31.396Z",
+                    "enabled": true
+                },
+                {
+                    "id": 594,
+                    "account_id": 132,
+                    "icon": "task",
+                    "name": "Plainte",
+                    "color": "#60B71A",
+                    "created_at": "2015-02-19T15:21:31.351Z",
+                    "updated_at": "2015-02-19T15:21:31.351Z",
+                    "enabled": true
+                },
+                {
+                    "id": 593,
+                    "account_id": 132,
+                    "icon": "task",
+                    "name": "Retours clients",
+                    "color": "#EF313D",
+                    "created_at": "2015-02-19T15:21:31.301Z",
+                    "updated_at": "2015-02-19T15:21:31.301Z",
+                    "enabled": true
+                }
+            ],
+            "rules_count": 0,
+            "rules": [],
+            "thirty_days_estimate": 0,
+            "trial_end_date": "2015-03-05T00:00:00.000Z"
+        }
+    ]
+}
