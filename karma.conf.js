@@ -14,12 +14,19 @@ module.exports = function(config) {
 
     jspm: {
       // Edit this to your needs
-      loadFiles: ['src/**/*.js', 'test/unit/**/*.js']
+      loadFiles: [
+        'test/mocks/**/*.js',
+        'test/unit/**/*.js'
+      ],
+      serveFiles: [
+        'src/**/*.js',
+      ]
     },
 
 
     // list of files / patterns to load in the browser
-    files: [],
+    //files: ['jspm_packages/github/petkaantonov/bluebird@2.9.12/js/browser/bluebird.js'],
+    files: ['tests/mocks/bluebird.js'],
 
 
     // list of files to exclude
@@ -66,7 +73,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    //browsers: ['Chrome'],
 
 
     // Continuous Integration mode
