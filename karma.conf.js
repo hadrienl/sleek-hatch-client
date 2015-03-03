@@ -20,8 +20,7 @@ module.exports = function(config) {
       ],
       serveFiles: [
         'src/**/*.js',
-      ],
-      useBundles: true
+      ]
     },
 
 
