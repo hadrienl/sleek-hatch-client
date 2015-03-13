@@ -4,10 +4,12 @@ export class AccountsList {
   static inject () { return [AccountsService]; }
   constructor (AccountsService) {
     this.AccountsService = AccountsService;
-    this.accounts = [];
   }
   activate (params, queryString, routeConfig) {
+    this.loading = true;
+    this.accounts = [];
     this.AccountsService.getAll(routeConfig.data.type)
-      .then(accounts => this.accounts = accounts);
+      .then(accounts => this.accounts = accounts)
+      .finally(() => this.loading = false);
   }
 }

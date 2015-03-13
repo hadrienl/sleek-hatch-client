@@ -1,23 +1,52 @@
 <template>
-  <table>
-    <thead>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Subdomain</th>
-      <th>CreatedAt</th>
-      <th>UsersCount</th>
-      <th>ChannelsCount</th>
-    </thead>
-    <tbody>
-      <tr
-        repeat.for="account of accounts">
-        <td>${account.id}</td>
-        <td>${account.name}</td>
-        <td>${account.subdomain}</td>
-        <td>${account.createdAt}</td>
-        <td>${account.usersCount}</td>
-        <td>${account.channelsCount}</td>
-      </tr>
-    </tbody>
-  </table>
+  <p
+    if.bind="loading">
+    Wait for it…
+  </p>
+  <div
+    if.bind="!loading">
+    <p
+      if.bind="!accounts.length">
+      No account found :(
+    </p>
+    <table
+      if.bind="accounts.length">
+      <thead>
+        <th>Name</th>
+        <th>Users</th>
+        <th>Channels</th>
+        <th>Created</th>
+        <th>Lifetime messages</th>
+        <th>Last 30 Days Messages</th>
+        <th>Last 7 Days Messages</th>
+        <th>Average Monthly Messages</th>
+        <th>30 Days Estimate</th>
+        <th>Inbox Count</th>
+        <th>Task Categories Count</th>
+        <th>Automation Rules Count</th>
+      </thead>
+      <tbody>
+        <tr
+          repeat.for="account of accounts">
+          <td>
+            <a
+              href="#/accounts/${account.id}">
+              ${account.name}
+            </a>
+          </td>
+          <td>${account.usersCount}</td>
+          <td>${account.channelsCount}</td>
+          <td>${account.createdAt}</td>
+          <td>${account.lifetimeMessages}</td>
+          <td>${account.thirtyDaysMessages}</td>
+          <td>${account.sevenDaysMessages}</td>
+          <td>${account.averageMessagesPerMonth}</td>
+          <td>${account.thirtyDaysEstimate}</td>
+          <td>${account.inboxCount}</td>
+          <td>${account.taskCategoriesCount}</td>
+          <td>${account.rulesCount}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
