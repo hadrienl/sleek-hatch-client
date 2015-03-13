@@ -8,8 +8,9 @@ export default class Api {
   }
 
   request (method, path, params) {
-    return new Promise((resolve, reject) => {
-      this.http[method](path, params)
+    return new P((resolve, reject) => {
+      this.http.request
+        [method](path, params)
         .then(data => {
           if ((''+data.statusCode)[0] === '2') {
             resolve(data.content);
