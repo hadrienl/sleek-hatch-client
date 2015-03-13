@@ -54,6 +54,7 @@
       "bootstrap": "github:twbs/bootstrap@^3.3.1",
       "es6-shim": "github:es-shims/es6-shim@^0.24.0",
       "font-awesome": "npm:font-awesome@^4.2.0",
+      "moment": "github:moment/moment@^2.9.0",
       "petkaantonov/bluebird": "github:petkaantonov/bluebird@^2.9.12"
     }
   }
