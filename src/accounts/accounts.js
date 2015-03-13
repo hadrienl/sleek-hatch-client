@@ -5,7 +5,6 @@ export class Accounts {
   constructor(router) {
     this.router = router;
     this.router.configure(config => {
-      config.title = 'Accounts';
       config.map([
         {
           route: ['','trial'],
@@ -42,6 +41,12 @@ export class Accounts {
           data: {
             type: 'closed'
           }
+        },
+        {
+          route: [':id'],
+          moduleId: 'accounts/account',
+          nav: false,
+          title: ''
         }
       ]);
     });

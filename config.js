@@ -14,6 +14,7 @@ System.config({
     "aurelia-framework": "github:aurelia/framework@0.8.8",
     "aurelia-http-client": "github:aurelia/http-client@0.5.5",
     "aurelia-router": "github:aurelia/router@0.5.8",
+    "aurelia-templating": "github:aurelia/templating@0.8.14",
     "bootstrap": "github:twbs/bootstrap@3.3.2",
     "es6-shim": "github:es-shims/es6-shim@0.24.0",
     "font-awesome": "npm:font-awesome@4.3.0",

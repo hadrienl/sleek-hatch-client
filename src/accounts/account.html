@@ -1,0 +1,74 @@
+<template>
+  <import from="filters/date-format"></import>
+  <a
+    href="#"
+    click.delegate="goBack()">Back</a>
+  <h2>
+    ${account.name}
+  </h2>
+
+  <div
+    class="row">
+    <div
+      class="col-md-6">
+      <ul>
+        <li>${account.usersCount} users</li>
+        <li>${account.channelsCount} channels</li>
+        <li>${account.lifetimeMessages} lifetime messages</li>
+        <li>${account.thirtyDaysMessages} last 30 days messages</li>
+        <li>${account.sevenDaysMessages} last 7 days messages</li>
+        <li>${account.averageMessagesPerMonth} monthly messages (average)</li>
+        <li>${account.thirtyDaysEstimate} 30 days estimate</li>
+        <li>${account.inboxCount} inbox messages</li>
+      </ul>
+    </div>
+    <div
+      class="col-md-6">
+      <ul>
+        <li>Subdomain: <a href="https://${account.subdomain}.sleekapp.io" target="_blank">${account.subdomain}.sleekapp.io</a></li>
+        <li>Created: ${account.createdAt|dateFormat:'LL'}</li>
+        <li>
+          <label
+            for="status">Status:<label>
+          <select
+            id="status"
+            value.bind="accountStatus">
+            <option
+              repeat.for="status of statuses"
+              value.bind="status.value"
+              selected.bind="$parent.account.status == status.value">${status.label}</option>
+          </select>
+          <button
+            type="button"
+            click.delegate="setStatus()">
+            Change status
+          </button>
+        </li>
+        <li>
+          <label
+            for="trial-end-date">Trial end date</label>
+          <input
+            type="date"
+            id="trial-end-date"
+            value.bind="accountTrialEndDate|dateFormat:'YYYY-MM-DD'">
+          <button
+            type="button"
+            click.delegate="setTrialEndDate()">Change date</button>
+        </li>
+        <li>
+          ${account.taskCategoriesCount} task categories
+        </li>
+        <li>
+          ${account.rulesCount} automation rules
+        </li>
+      </ul>
+    </div>
+  </div>
+  <h2>
+    Users
+  </h2>
+  <import
+    from='accounts/account-users'></import>
+  <account-users
+    account.bind="account"></account-users>
+</template>

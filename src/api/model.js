@@ -22,6 +22,8 @@ export default class Model {
             return new Date(this.data[propertyName]);
           case Number:
             return +this.data[propertyName];
+          case Boolean:
+            return Boolean(this.data[propertyName]);
           case String:
             return `${this.data[propertyName]}`;
           default:

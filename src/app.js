@@ -21,7 +21,7 @@ export class App {
           route: 'accounts',
           moduleId: 'accounts/accounts',
           nav: true,
-          title:'Accounts'
+          title: 'Accounts'
         },
         {
           route: 'channels',

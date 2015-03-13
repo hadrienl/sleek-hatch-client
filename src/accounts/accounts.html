@@ -1,13 +1,17 @@
 <template>
-  <h2>Accounts list — ${router.currentInstruction.config.data.type}</h2>
 
-  <nav class="navbar navbar-default" role="navigation">
-    <ul class="nav navbar-nav">
-      <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
-        <a href.bind="row.href">${row.title}</a>
-      </li>
-    </ul>
-  </nav>
+  <div
+    if.bind="router.currentInstruction.config.data.type">
+    <h2>Accounts list — ${router.currentInstruction.config.data.type}</h2>
+
+    <nav class="navbar navbar-default" role="navigation">
+      <ul class="nav navbar-nav">
+        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
   <router-view></router-view>
 </template>

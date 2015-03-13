@@ -10,6 +10,7 @@ export class AccountsList {
     this.accounts = [];
     this.AccountsService.getAll(routeConfig.data.type)
       .then(accounts => this.accounts = accounts)
+      .catch(() => {})
       .finally(() => this.loading = false);
   }
 }

@@ -4,6 +4,8 @@ export default class AccountModel extends Model {
   static properties () { return {
     id: null,
     name: null,
+    subdomain: null,
+    status: null,
     createdAt: {
       from: 'created_at',
       type: Date
@@ -47,6 +49,10 @@ export default class AccountModel extends Model {
     rulesCount: {
       from: 'rules_count',
       type: Number
+    },
+    trialEndDate: {
+      from: 'trial_end_date',
+      type: Date
     }
   }; }
 }

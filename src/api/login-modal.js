@@ -4,7 +4,11 @@ export default class LoginModal {
       var login = prompt('Votre login'),
         password = prompt('Votre mot de passe');
 
-      resolve({login: login, password: password});
+      if (login && password) {
+        resolve({login: login, password: password});
+      } else {
+        reject();
+      }
     });
   }
 }

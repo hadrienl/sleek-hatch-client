@@ -1,4 +1,5 @@
 <template>
+  <import from="filters/date-format"></import>
   <p
     if.bind="loading">
     Wait for it…
@@ -36,7 +37,7 @@
           </td>
           <td>${account.usersCount}</td>
           <td>${account.channelsCount}</td>
-          <td>${account.createdAt}</td>
+          <td>${account.createdAt|dateFormat:'LL'}</td>
           <td>${account.lifetimeMessages}</td>
           <td>${account.thirtyDaysMessages}</td>
           <td>${account.sevenDaysMessages}</td>
