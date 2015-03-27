@@ -42,8 +42,9 @@ export default class AccountModel extends Model {
       from: 'inbox_count',
       type: Number
     },
-    taskCategoriesCount: {
-      from: 'task_categories_count',
+    labels: null,
+    labelsCount: {
+      from: 'labels_count',
       type: Number
     },
     rulesCount: {
