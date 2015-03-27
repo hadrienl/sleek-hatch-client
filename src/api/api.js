@@ -18,12 +18,13 @@ export default class Api {
       if (!sessionStorage.auth) {
         this._tryToLogin(method, path, params, resolve, reject);
       }
-      this.http.request
+      let methodName = method.substr(0,1).toUpperCase() + method.substr(1);
+      this.http.createRequest(`/admin${path}`)
+        [`as${methodName}`]()
+        .withBaseUri('//coincoin.sandbox.sleekapp.io')
         .withHeader('Authorization', `basic ${sessionStorage.auth}`)
         .withHeader('Content-type', 'application/json, text/plain')
-        [method](
-          `//coincoin.sandbox.sleekapp.io/admin${path}`,
-          params)
+        .send()
         .then(data => {
           if ((''+data.statusCode)[0] === '2') {
             resolve(data.content);
