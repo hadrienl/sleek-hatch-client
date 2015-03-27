@@ -1,3 +1,27 @@
 <template>
-  <p>Coin</p>
+  <p
+    if.bind="!labels.length">
+    No label found :(
+  </p>
+  <table
+    if.bind="labels.length"
+    class="account-labels-list">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        repeat.for="label of labels">
+        <td>
+          <span
+            class="color"
+            css="background-color: ${label.color}"></span>
+        </td>
+        <td>${label.name}</td>
+      </tr>
+    </tbody>
+  </table>
 </template>
