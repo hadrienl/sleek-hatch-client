@@ -6,6 +6,7 @@ export class App {
     this.router = router;
     this.router.configure(config => {
       config.title = 'The Hatch';
+      config.options.pushState = true;
       config.map([
         {
           route: ['','welcome'],

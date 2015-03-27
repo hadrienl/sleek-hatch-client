@@ -59,5 +59,8 @@
       "moment": "github:moment/moment@^2.9.0",
       "petkaantonov/bluebird": "github:petkaantonov/bluebird@^2.9.12"
     }
+  },
+  "dependencies": {
+    "connect-history-api-fallback": "0.0.5"
   }
 }

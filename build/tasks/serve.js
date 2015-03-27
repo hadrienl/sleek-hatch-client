@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
+var historyApiFallback = require('connect-history-api-fallback');
 
 gulp.task('serve', ['build'], function(done) {
   browserSync({
@@ -7,10 +8,10 @@ gulp.task('serve', ['build'], function(done) {
     port: 9000,
     server: {
       baseDir: ['.'],
-      middleware: function (req, res, next) {
+      middleware: [historyApiFallback, function (req, res, next) {
         res.setHeader('Access-Control-Allow-Origin', '*');
         next();
-      }
+      }]
     }
   }, done);
 });
