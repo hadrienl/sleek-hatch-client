@@ -11,7 +11,10 @@ export class AccountUsersCustomElement {
 
   constructor(AccountsService) {
     this.AccountsService = AccountsService;
-    Object.observe(this, () => this.loadUsers());
+  }
+
+  accountChanged () {
+    this.loadUsers();
   }
 
   loadUsers() {

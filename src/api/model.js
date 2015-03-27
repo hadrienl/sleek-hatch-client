@@ -1,8 +1,14 @@
-export default class Model {
+const SERVICES = Symbol();
+
+class Model {
   static properties () { return {}; }
 
-  constructor (data = {}) {
-    this.data = data;
+  constructor (data, ...services) {
+    this.data = data || {};
+
+    for (let service of services) {
+      this[service.constructor.name] = service;
+    }
 
     var properties = this.constructor.properties();
     for (var property in properties) {
@@ -32,5 +38,17 @@ export default class Model {
       },
       set: (v) => this.data[propertyName] = v
     });
+  }
+}
+
+export default class ModelFactory {
+  static Model () { return Model; }
+  constructor (...services) {
+    this[SERVICES] = services;
+  }
+
+  create (data) {
+    let Model = this.constructor.Model();
+    return new Model(data, ...this[SERVICES]);
   }
 }

@@ -1,6 +1,7 @@
-import Model from './model';
+import Api from './api';
+import ModelFactory from './model';
 
-export default class UserModel extends Model {
+class UserModel extends ModelFactory.Model() {
   static properties () { return {
     id: null,
     firstname: null,
@@ -25,4 +26,9 @@ export default class UserModel extends Model {
       type: Boolean
     }
   }; }
+}
+
+export default class UserModelFactory extends ModelFactory {
+  static inject() { return [Api]; }
+  static Model () { return UserModel; }
 }

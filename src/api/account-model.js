@@ -1,6 +1,12 @@
-import Model from './model';
+import Api from './api';
+import ModelFactory from './model';
+import UserModelFactory from './user-model';
+//import ChannelsService from './channels-service';
 
-export default class AccountModel extends Model {
+const USERS = Symbol(),
+  CHANNELS = Symbol();
+
+class AccountModel extends ModelFactory.Model() {
   static properties () { return {
     id: null,
     name: null,
@@ -56,4 +62,35 @@ export default class AccountModel extends Model {
       type: Date
     }
   }; }
+
+  get users () {
+    if (!this[USERS]) {
+      this[USERS] = [];
+      Object.defineProperty(this[USERS], 'promise', {
+        value: new P((resolve, reject) => {
+          this.Api.request('get', `/accounts/${this.id}/users`)
+            .then(data => {
+              for (let userData of data) {
+                this[USERS].push(this.UserModelFactory.create(userData));
+              }
+              resolve(this[USERS]);
+            })
+            .catch(err => reject(err));
+        }),
+        enumerable: false
+      });
+    }
+    return this[USERS];
+  }
+
+  get channels () {
+    if (!this[CHANNELS]) {
+      this.request('http://coincoin.sandbox.sleekapp.io/admin/accounts/1');
+    }
+  }
+}
+
+export default class AccountModelFactory extends ModelFactory {
+  static inject() { return [Api, UserModelFactory]; }
+  static Model () { return AccountModel; }
 }

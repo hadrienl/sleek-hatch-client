@@ -30,7 +30,7 @@ export default class Account {
           console.log(routeConfig);*/
           resolve(true);
         })
-        .catch(() => reject(false));
+        .catch(err => reject(err));
     });
   }
   activate () {
