@@ -1,8 +1,10 @@
 <template>
   <import from="filters/date-format"></import>
+  <import from="ui/gravatar"></import>
   <table>
     <thead>
       <tr>
+        <th></th>
         <th>Name</th>
         <th>Email</th>
         <th>Signup date</th>
@@ -11,6 +13,11 @@
     <tbody>
       <tr
         repeat.for="user of users">
+        <td>
+          <gravatar
+            email.bind="user.email"
+            size="sm"></gravatar>
+        </td>
         <td>${user.firstname} ${user.lastname}</td>
         <td>${user.email}</td>
         <td>${user.createdAt|dateFormat:'LL'}</td>

@@ -64,11 +64,12 @@
       </ul>
     </div>
   </div>
-  <h2>
-    Users
-  </h2>
-  <import
-    from='accounts/account-users'></import>
-  <account-users
-    account.bind="account"></account-users>
+  <nav class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav">
+      <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+        <a href.bind="row.href">${row.title}</a>
+      </li>
+    </ul>
+  </nav>
+  <router-view></router-view>
 </template>

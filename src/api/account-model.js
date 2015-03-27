@@ -1,7 +1,7 @@
 import Api from './api';
 import ModelFactory from './model';
 import UserModelFactory from './user-model';
-//import ChannelsService from './channels-service';
+import ChannelModelFactory from './channel-model';
 
 const USERS = Symbol(),
   CHANNELS = Symbol();
@@ -85,12 +85,26 @@ class AccountModel extends ModelFactory.Model() {
 
   get channels () {
     if (!this[CHANNELS]) {
-      this.request('http://coincoin.sandbox.sleekapp.io/admin/accounts/1');
+      this[CHANNELS] = [];
+      Object.defineProperty(this[CHANNELS], 'promise', {
+        value: new P((resolve, reject) => {
+          this.Api.request('get', `/accounts/${this.id}/channels`)
+            .then(data => {
+              for (let channelData of data.channels) {
+                this[CHANNELS].push(this.ChannelModelFactory.create(channelData));
+              }
+              resolve(this[CHANNELS]);
+            })
+            .catch(err => reject(err));
+        }),
+        enumerable: false
+      });
     }
+    return this[CHANNELS];
   }
 }
 
 export default class AccountModelFactory extends ModelFactory {
-  static inject() { return [Api, UserModelFactory]; }
+  static inject() { return [Api, UserModelFactory, ChannelModelFactory]; }
   static Model () { return AccountModel; }
 }

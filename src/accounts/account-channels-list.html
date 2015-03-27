@@ -1,0 +1,36 @@
+<template>
+  <import from="filters/date-format"></import>
+  <p
+    if.bind="!loading && !channels.length">
+    No channel found :(
+  </p>
+  <table
+    if.bind="!loading && channels.length">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Source</th>
+        <th>Connected?</th>
+        <th>Inbox count</th>
+        <th>Disabled?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        repeat.for="channel of channels">
+        <td>
+          <img
+            if.bind="channel.icon"
+            src.bind="channel.icon"
+            width="32">
+        </td>
+        <td>${channel.name}</td>
+        <td>${channel.type}</td>
+        <td>${channel.connected ? 'yes' : 'no'}</td>
+        <td>${channel.inboxCount}</td>
+        <td>${channel.disabled ? 'yes' : 'no'}</td>
+      </tr>
+    </tbody>
+  </table>
+</template>
